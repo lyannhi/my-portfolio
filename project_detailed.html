@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alae Silentes • Video Production</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.typekit.net/uix6jmv.css">
+  <style>
+    /* Reset & Box Sizing */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      scroll-behavior: smooth; 
+    }
+
+    body {
+      background-color: #000;
+      color: #f3f3f3;
+      font-family: 'neulis-sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ─────────── NAVBAR ─────────── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 50px;
+      padding: 0 1.5rem 1rem 1.5rem;
+      background-color: rgb(0, 0, 0,0.8);
+      z-index: 100;
+    }
+    nav ul {
+      margin-top: 40px;
+      list-style: none;
+      position: relative;
+    }
+    nav ul li {
+      margin-bottom: 24px;
+    }
+    nav ul li:last-child {
+      margin-bottom: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 300;
+      color: #666;
+      transition: color 0.2s ease-in-out;
+      display: block;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+      color: #f3f3f3;
+      cursor: pointer;
+    }
+
+    /* ─────────── THE VERTICAL “LINE” ─────────── */
+    .nav-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 0;
+      background: #f3f3f3; 
+      transition: height 0.25s ease-in-out;
+    }
+
+    /* Logo (Top Right) */
+    .logo {
+      position: fixed;
+      top: 40px;
+      right: 50px;
+      font-family: 'Corinthia', cursive;
+      font-size: 2.5rem;
+      color: #f3f3f3;
+      text-shadow: 0 0 10px black;
+      z-index: 100;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .logo:hover {
+        color: rgb(190, 14, 14);
+    }
+
+    /* ─────────── PROJECT DETAIL SECTION ─────────── */
+    section#project-detail {
+      position: relative;
+      padding: 7rem 0 4rem 50px; 
+    }
+
+    /* Title (“Alae Silentes”) */
+    .project-title {
+      font-family: 'Corinthia', cursive;
+      font-size: 8.5rem;
+      margin-bottom: 1rem;
+      padding-left: 200px;
+    }
+
+    /* Main Content: Media + Description */
+    .project-content {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      padding-left: 200px;
+    }
+
+    /* Left side: large “media” placeholder */
+    .project-media {
+      width: 100%;
+      height: 30rem;
+      background-color: #ddd;
+      background: linear-gradient(
+        to right,
+        #000000,    /* pure black on the far left */
+        #f3f3f3     /* pure white on the far right */
+    );
+    }
+
+    /* Right side: description text (right‐aligned) */
+    .project-desc {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      font-weight: 300;
+      color: #ccc;
+      text-align: right;
+      max-width: 42rem;
+      padding-right: 50px;
+      margin-left: auto;
+    }
+
+    /* ── “Extra Details” Wrapper ───────────────────────────────────────────── */
+    .project-extra {
+    display: grid;
+    grid-template-columns: 0.7fr 40px 2.3fr;
+    gap: 2rem;                
+    margin-top: 10rem;          
+    padding-right: 50px;
+    }
+
+    /* ── LEFT COLUMN: Metadata Styling ─────────────────────────────────────── */
+    .extra-meta {
+    color: #f3f3f3;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.6;
+    }
+
+    .meta-label {
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+    }
+
+    /* ── MIDDLE COLUMN: Vertical Separator ────────────────────────────────── */
+    .extra-separator {
+    background: linear-gradient(to top, #000, #f3f3f3);
+    width: 1px;
+    height: 50rem;
+    }
+
+    .media-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem; 
+    }
+
+    .media-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;         
+    background-color: #ddd;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    }
+
+    .media-video {
+    grid-column: 1 / -1;  
+    }
+
+    /* ─────────── FOOTER / CONTACT SECTION STYLES ─────────── */
+    .footer-contact {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    padding: 4rem 50px;   
+    overflow-x: hidden;
+    }
+
+    .footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    }
+
+    .footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    }
+
+    .footer-logo {
+        width: fit-content;
+        text-decoration: none;
+        font-family: 'Corinthia', cursive;
+        font-size: 2.5rem;
+        line-height: 1;
+        margin-bottom: 2rem;
+        color: #f3f3f3;
+        transition: all 0.3s ease;
+    }
+    .footer-logo:hover {
+        color: rgb(190, 14, 14);
+    }
+
+    .footer-tagline {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 4rem;
+    }
+
+    .footer-copyright {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #f3f3f3;
+    margin-top: auto;
+    }
+
+    .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    }
+
+    .contact-heading {
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    }
+
+    .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    }
+
+    .social-icons img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border: 0.3px solid #f3f3f3;
+    border-radius: 0.2rem;
+    transition: all 0.2s ease-in-out;
+    }
+    .social-icons a:hover img {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+    }
+
+    .contact-details .contact-link {
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    }
+
+    /* OTHER PROJECTS STYLES */
+    #other-projects {
+    width: 100%;
+    margin: 4rem 0 8rem;
+    padding: 0 50px;
+    }
+
+    #other-projects .other-title {
+    font-family: 'neulis-sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    }
+
+    .other-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    }
+
+    .other-item {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    cursor: pointer;
+    }
+
+    .other-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #ddd;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    position: relative;
+    }
+
+    .other-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    }
+
+    .other-caption {
+    font-family: 'neulis-sans', sans-serif;
+    font-size: 0.875rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.3;
+    opacity: 0.5;
+    color: #f3f3f3;
+    transition: all 0.3s ease;
+    }
+    .other-item:hover .other-caption {
+        opacity: 1;
+    }
+  </style>
+</head>
+<body>
+    <!-- ─────────── NAVIGATION BAR ─────────── -->
+    <nav>
+        <div class="nav-line"></div>
+        <ul>
+        <li><a href="index.html#home" class="nav-link">home</a></li>
+        <li><a href="index.html#about" class="nav-link">about</a></li>
+        <li><a href="index.html#works" class="nav-link active">works</a></li>
+        <li><a href="#contact" class="nav-link">contact</a></li>
+        </ul>
+    </nav>
+
+    <a href="index.html#home" class="logo">lyannhi</a>
+
+    <!-- ─────────── PROJECT DETAIL SECTION ─────────── -->
+    <section id="project-detail">
+        <!-- Project Title -->
+        <div class="project-title" id="jsProjectTitle"></div>
+
+        <div class="project-content">
+            <div class="project-media" id="jsProjectMedia"></div>
+
+            <!-- RIGHT: Description text -->
+            <div class="project-desc" id="jsProjectDescription"></div>
+        </div>
+
+        <div class="project-extra">
+            <!-- LEFT COLUMN: Metadata -->
+            <div class="extra-meta" id="jsProjectMeta"></div>
+
+            <!-- MIDDLE COLUMN: Thin vertical separator -->
+            <div class="extra-separator"></div>
+
+            <!-- RIGHT COLUMN: 2×2 Grid of media placeholders -->
+            <div class="media-grid" id="jsMediaGrid"></div>
+        </div>
+    </section>
+
+        <section id="other-projects">
+    <h2 class="other-title">Other projects</h2>
+
+    <div class="other-grid" id="otherProjectsContainer"></div>
+    </section>
+    
+    <!-- ─────────── FOOTER / CONTACT SECTION ─────────── -->
+    <section id="contact" class="footer-contact">
+    <div class="footer-container">
+        <!-- Left Column -->
+        <div class="footer-left">
+        <a href="#home" class="footer-logo">lyannhi</a>
+        <div class="footer-tagline">
+            Let’s create meaningful and<br />
+            unexpected stories together.
+        </div>
+        <div class="footer-copyright">
+            © 2025 Lý An Nhi. All rights reserved
+        </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="footer-right">
+        <div class="contact-heading">Contact info</div>
+
+        <div class="social-icons">
+            <!-- Replace the `src` with your actual icon filepaths or SVGs -->
+            <a href="https://www.linkedin.com" target="_blank"><img src="img/social/linkedin.png" alt="LinkedIn" /></a>
+            <a href="https://www.facebook.com" target="_blank"><img src="img/social/facebook.png" alt="Facebook" /></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="img/social/instagram.png" alt="Instagram" /></a>
+        </div>
+
+        <div class="contact-details">
+            <div class="contact-link">lynhi1412004@gmail.com</div>
+            <div class="contact-link">+84 921849636</div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+  <script src="project_data.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // ─────────────────────────────────────────────────────
+      // (A) First: Same code as before to fill in the “this project” details
+      // ─────────────────────────────────────────────────────
+      const params = new URLSearchParams(window.location.search);
+      const projectId = params.get('id');
+      if (!projectId) {
+        window.location.href = 'index.html#works';
+        return;
+      }
+
+      const project = projectsData.find(p => p.id === projectId);
+      if (!project) {
+        window.location.href = 'index.html#works';
+        return;
+      }
+
+      // 1) Set document.title
+      document.title = `${project.title} • ${project.category}`;
+
+      // 2) Fill in title, description, meta, media grid
+      document.getElementById('jsProjectTitle').textContent = project.title;
+      document.getElementById('jsProjectDescription').textContent = project.description;
+
+      const metaContainer = document.getElementById('jsProjectMeta');
+      const makeLabel = labelText => {
+        const p = document.createElement('p');
+        p.classList.add('meta-label');
+        p.textContent = labelText;
+        return p;
+      };
+      const makeValue = text => {
+        const p = document.createElement('p');
+        p.textContent = text;
+        return p;
+      };
+
+      metaContainer.appendChild(makeLabel('Project Type'));
+      metaContainer.appendChild(makeValue(project.category));
+      metaContainer.appendChild(makeLabel('Type'));
+      metaContainer.appendChild(makeValue(project.metadata.type));
+      metaContainer.appendChild(makeLabel('Duration'));
+      metaContainer.appendChild(makeValue(project.metadata.duration));
+      metaContainer.appendChild(makeLabel('My Scope of Work'));
+      project.metadata.scope.forEach(item => {
+        const p = document.createElement('p');
+        p.textContent = item;
+        metaContainer.appendChild(p);
+      });
+
+      const grid = document.getElementById('jsMediaGrid');
+      project.mediaThumbs.forEach(src => {
+        const div = document.createElement('div');
+        div.classList.add('media-thumb');
+        div.style.backgroundColor = '#444';
+        grid.appendChild(div);
+      });
+      const videoDiv = document.createElement('div');
+      videoDiv.classList.add('media-thumb', 'media-video');
+      videoDiv.style.backgroundColor = '#222';
+      grid.appendChild(videoDiv);
+
+      // ─────────────────────────────────────────────────────
+      // (B) Now: “Other projects” → pick four random ones *excluding* the current
+      // ─────────────────────────────────────────────────────
+      const otherContainer = document.getElementById('otherProjectsContainer');
+
+      // 1) Make a shallow copy of projectsData, then remove the current project:
+      const others = projectsData.filter(p => p.id !== projectId);
+
+      // 2) Shuffle that array in-place using Fisher–Yates, then take the first 4:
+      for (let i = others.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [others[i], others[j]] = [others[j], others[i]];
+      }
+      const randomFour = others.slice(0, 4);
+
+      // 3) For each of those four, create an <a class="other-item">…</a> and append:
+      randomFour.forEach(proj => {
+        const link = document.createElement('a');
+        link.href = `project_detailed.html?id=${proj.id}`;
+        link.classList.add('other-item');
+        link.style.textDecoration = 'none';
+
+        const thumbDiv = document.createElement('div');
+        thumbDiv.classList.add('other-thumb');
+
+        // If you have a real thumbnail URL, use:
+        // const img = document.createElement('img');
+        // img.src = proj.thumbnail;
+        // img.alt = proj.title;
+        // thumbDiv.appendChild(img);
+
+        // For now, give a placeholder background:
+        thumbDiv.style.backgroundColor = '#444';
+
+        const caption = document.createElement('p');
+        caption.classList.add('other-caption');
+        caption.textContent = proj.title;
+
+        link.appendChild(thumbDiv);
+        link.appendChild(caption);
+        otherContainer.appendChild(link);
+      });
+
+      // ─────────────────────────────────────────────────────
+      // (C) Nav‐bar “active”‐link + line animation (unchanged)
+      // ─────────────────────────────────────────────────────
+      const navLinks = document.querySelectorAll('.nav-link');
+      const navLine = document.querySelector('.nav-line');
+      const sections = Array.from(document.querySelectorAll('section'));
+
+      const extraTop = -10, extraBottom = +15;
+      navLine.style.top = extraTop + 'px';
+
+      function updateActiveLinkAndLine() {
+        let currentSection = sections[0];
+        for (let sec of sections) {
+          const rect = sec.getBoundingClientRect();
+          if (rect.top <= window.innerHeight * 0.3) {
+            currentSection = sec;
+          }
+        }
+        navLinks.forEach(link => link.classList.remove('active'));
+        const activeLink = document.querySelector(`.nav-link[href="#${currentSection.id}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active');
+          const linkRect = activeLink.getBoundingClientRect();
+          const navRect = activeLink.closest('nav').getBoundingClientRect();
+          const linkMid = (linkRect.top + linkRect.bottom)/2 - navRect.top;
+          navLine.style.height = linkMid + extraBottom + 'px';
+        }
+      }
+
+      updateActiveLinkAndLine();
+      window.addEventListener('scroll', updateActiveLinkAndLine);
+      window.addEventListener('resize', updateActiveLinkAndLine);
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
