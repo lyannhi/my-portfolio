@@ -48,7 +48,12 @@
       top: 0;
       left: 50px;
       padding: 0 1.5rem 1rem 1.5rem;
+      background: rgba(0,0,0,0);
+      transition: background 0.3s ease;
       z-index: 100;
+    }
+    nav.scrolled {
+      background: rgba(0,0,0,0.6);
     }
     nav ul {
       margin-top: 40px;
@@ -67,7 +72,6 @@
       font-weight: 300;
       color: #666;
       transition: color 0.2s ease-in-out;
-      text-shadow: 0 0 10px black;
       display: block;
     }
     nav ul li a.active,
@@ -766,6 +770,7 @@
     /* Media Queries */
     @media (max-width: 768px) {
     nav { left: 28px; padding: 0 1rem 1rem 1rem; }
+    nav ul li a { font-size: 0.9rem;}
     .title-container { bottom: 400px !important; }
     .title-container .port { font-size: 1.3rem; margin-bottom: 2rem; }
     .title-container .digital {font-size: 6rem !important;}
@@ -1169,6 +1174,16 @@
           navLinks.forEach(l => l.classList.remove('active'));
           link.classList.add('active');
         });
+      });
+
+      const navEl = document.querySelector('nav');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+          navEl.classList.add('scrolled');
+        } else {
+          navEl.classList.remove('scrolled');
+        }
       });
 
       // ─────────────────────────────────────────────────────────────────────
