@@ -498,16 +498,24 @@
         flex: 0 0 13.8rem;          
         height: 35rem;            
         border-radius: 0.2rem;
-        background: #ccc;
         position: relative;
         scroll-snap-align: center;
         transition: flex-basis 0.4s ease-in-out, max-width 0.4s ease-in-out;
         max-width: 13.6rem;         
         overflow: hidden;  
-        cursor: pointer;        
+        cursor: pointer; 
     }
-
-    .work-card.active { flex: 0 0 27rem; max-width: 27rem; }
+    .work-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      transition: background 0.3s ease;
+    }
+    .work-card.active::before {
+      background: rgba(0,0,0,0.15);
+    }
+    .work-card.active { flex: 0 0 27rem; max-width: 27rem;}
     .work-overlay {
         position: absolute;
         top: 0;
@@ -518,7 +526,6 @@
         flex-direction: column;
         justify-content: flex-end;
         padding: 1.5rem;
-        background: transparent;
         border-radius: 0.2rem;
         opacity: 0;
         visibility: hidden;
@@ -648,8 +655,14 @@
     .work-thumb {
     width: 100%;
     aspect-ratio: 16 / 9;  
-    background-color: #ddd; 
     border-radius: 0.2rem;
+    }
+
+    .work-thumb img {
+      display: block;  
+      width: 100%;  
+      height: 100%;  
+      object-fit: cover;  
     }
 
     .work-details {
@@ -1130,7 +1143,13 @@
 
         const thumb = document.createElement('div');
         thumb.classList.add('work-thumb');
-        thumb.style.backgroundColor = '#555';
+
+        // create an <img> using your thumbnail URL
+        const img = document.createElement('img');
+        img.src   = project.thumbnail;   // ← your real thumbnail path
+        img.alt   = project.title;       // accessibility
+        thumb.appendChild(img);
+
         item.appendChild(thumb);
 
         const details = document.createElement('div');
@@ -1280,6 +1299,9 @@
         if (idx === Math.floor(featuredProjects.length/2)) {
         card.classList.add('active');
         }
+        card.style.backgroundImage    = `url(${proj.thumbnail})`;
+        card.style.backgroundSize     = 'cover';
+        card.style.backgroundPosition = '75%';
 
         const overlay = document.createElement('div');
         overlay.classList.add('work-overlay');
