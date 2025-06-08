@@ -25,17 +25,19 @@ const projectsData = [
       ]
     },
     // For “Other Projects” thumbnails, if you have static images:
-    thumbnail: 'img/other1.jpg',
+    thumbnail: 'img/projects/alae_silentes/cover.png',
     // If you want to display media thumbnails on the detailed page:
     mediaThumbs: [
-      'img/alae1.jpg',
-      'img/alae2.jpg',
-      'img/alae3.jpg',
-      'img/alae4.jpg',
-      'img/alae5.jpg',
-      'img/alae6.jpg'
+      'img/projects/alae_silentes/1.png',
+      'img/projects/alae_silentes/2.png',
+      'img/projects/alae_silentes/3.png',
+      'img/projects/alae_silentes/4.png',
+      'img/projects/alae_silentes/5.png',
+      'img/projects/alae_silentes/6.png',
+      'img/projects/alae_silentes/7.png',
+      'img/projects/alae_silentes/8.png'
     ],
-    mediaVideo: 'img/alae-video-poster.jpg' // a poster or video thumbnail for the large grid
+    mediaVideo: 'img/projects/alae_silentes/video.mp4' // a poster or video thumbnail for the large grid
   },
 
   // ───── You can repeat for other projects ────────────────────────────────────
