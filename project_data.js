@@ -25,17 +25,17 @@ const projectsData = [
       ]
     },
     // For “Other Projects” thumbnails, if you have static images:
-    thumbnail: 'img/projects/alae_silentes/cover.png',
+    thumbnail: 'img/projects/alae_silentes/cover.jpeg',
     // If you want to display media thumbnails on the detailed page:
     mediaThumbs: [
-      'img/projects/alae_silentes/1.png',
-      'img/projects/alae_silentes/2.png',
-      'img/projects/alae_silentes/3.png',
-      'img/projects/alae_silentes/4.png',
-      'img/projects/alae_silentes/5.png',
-      'img/projects/alae_silentes/6.png',
-      'img/projects/alae_silentes/7.png',
-      'img/projects/alae_silentes/8.png'
+      'img/projects/alae_silentes/1.jpeg',
+      'img/projects/alae_silentes/2.jpeg',
+      'img/projects/alae_silentes/3.jpeg',
+      'img/projects/alae_silentes/4.jpeg',
+      'img/projects/alae_silentes/5.jpeg',
+      'img/projects/alae_silentes/6.jpeg',
+      'img/projects/alae_silentes/7.jpeg',
+      'img/projects/alae_silentes/8.jpeg'
     ],
     mediaVideo: 'https://player.vimeo.com/video/1091786100?title=0&byline=0&portrait=0' // a poster or video thumbnail for the large grid
   },
