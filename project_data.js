@@ -37,7 +37,10 @@ const projectsData = [
       'img/projects/alae_silentes/7.jpeg',
       'img/projects/alae_silentes/8.jpeg'
     ],
-    mediaVideo: 'https://player.vimeo.com/video/1091786100?title=0&byline=0&portrait=0' // a poster or video thumbnail for the large grid
+    mediaVideos: [
+      'https://player.vimeo.com/video/1091824441?title=0&byline=0&portrait=0',
+      'https://player.vimeo.com/video/1091786100?title=0&byline=0&portrait=0'
+    ],
   },
 
   // ───── You can repeat for other projects ────────────────────────────────────
