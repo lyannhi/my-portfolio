@@ -33,9 +33,11 @@ const projectsData = [
       'img/projects/alae_silentes/3.jpeg',
       'img/projects/alae_silentes/4.jpeg',
       'img/projects/alae_silentes/5.jpeg',
+      'img/projects/alae_silentes/10.jpeg',
       'img/projects/alae_silentes/6.jpeg',
       'img/projects/alae_silentes/7.jpeg',
-      'img/projects/alae_silentes/8.jpeg'
+      'img/projects/alae_silentes/8.jpeg',
+      'img/projects/alae_silentes/11.jpeg'
     ],
     mediaVideos: [
       'https://youtu.be/NH7QO1Kzq8g',
