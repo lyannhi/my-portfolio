@@ -249,6 +249,11 @@
       max-height: 90%;
       box-shadow: 0 0 20px #000;
     }
+    #lb-iframe {
+      display: block;
+      width: 90vw;
+      height: 90vh;
+    }
     .lb-btn {
       position: absolute;
       background: transparent;
@@ -470,6 +475,9 @@
       <!-- for images -->
       <img   id="lb-img"   class="lb-img" src=""    alt="" />
 
+      <!-- for your existing raw-MP4 usage (you could remove this if you never do .mp4) -->
+      <video id="lb-vid"   class="lb-img" controls style="display:none"></video>
+
       <!-- <iframe> for Vimeo embeds -->
       <iframe
         id="lb-iframe"
@@ -636,36 +644,35 @@
       const thumbs   = Array.from(document.querySelectorAll('.media-thumb'));
       const lightbox = document.getElementById('lightbox');
       const lbImg    = document.getElementById('lb-img');
-      const lbVid    = document.getElementById('lb-vid');
-      const lbFrame  = document.getElementById('lb-iframe');
-      let   current  = 0;
+const lbVid    = document.getElementById('lb-vid');
+const lbFrame  = document.getElementById('lb-iframe');
 
-      function showLightbox(idx) {
-        current = idx;
-        const { type, src } = thumbs[idx].dataset;
+function showLightbox(idx) {
+  current = idx;
+  const { type, src } = thumbs[idx].dataset;
 
-        // hide everything
-        [lbImg, lbVid, lbFrame].forEach(el => el.style.display = 'none');
+  // hide everything
+  [lbImg, lbVid, lbFrame].forEach(el => el.style.display = 'none');
 
-        if (type === 'image') {
-          lbImg.src            = src;
-          lbImg.style.display  = 'block';
+  if (type === 'image') {
+    lbImg.src            = src;
+    lbImg.style.display  = 'block';
 
-        } else if (src.includes('player.vimeo.com')) {
-          // Vimeo embed
-          lbFrame.src          = src;
-          lbFrame.style.display = 'block';
+  } else if (src.includes('player.vimeo.com')) {
+    // Vimeo embed
+    lbFrame.src          = src;
+    lbFrame.style.display = 'block';
 
-        } else {
-          // fallback to native video
-          lbVid.src            = src;
-          lbVid.style.display  = 'block';
-          lbVid.currentTime    = 0;
-          lbVid.play();
-        }
+  } else {
+    // fallback to native video
+    lbVid.src            = src;
+    lbVid.style.display  = 'block';
+    lbVid.currentTime    = 0;
+    lbVid.play();
+  }
 
-        lightbox.classList.add('visible');
-      }
+  lightbox.classList.add('visible');
+}
 
       function step(n) {
         current = (current + n + thumbs.length) % thumbs.length;
