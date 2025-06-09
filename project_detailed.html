@@ -470,21 +470,24 @@
 
     <div id="lightbox" class="lightbox">
       <button id="lb-close" class="lb-btn lb-close">✕</button>
-      <button id="lb-prev"   class="lb-btn lb-nav">‹</button>
+      <button id="lb-prev"  class="lb-btn lb-nav">‹</button>
 
       <!-- for images -->
-      <img   id="lb-img"   class="lb-img" src=""    alt="" />
+      <img   id="lb-img"   class="lb-img" src="" alt="" />
 
-      <!-- <iframe> for Vimeo embeds -->
+      <!-- you need this if your JS references lbVid -->
+      <video id="lb-vid" class="lb-img" controls style="display:none"></video>
+
+      <!-- for Vimeo/YouTube -->
       <iframe
         id="lb-iframe"
         class="lb-img"
         frameborder="0"
         allow="autoplay; fullscreen"
-        style="display:none"
+        style="display:none; width:90vw; height:90vh"
       ></iframe>
 
-      <button id="lb-next"  class="lb-btn lb-nav">›</button>
+      <button id="lb-next" class="lb-btn lb-nav">›</button>
     </div>
 
     <!-- ─────────── PROJECT DETAIL SECTION ─────────── -->
@@ -609,9 +612,10 @@
 
       const grid = document.getElementById('jsMediaGrid');
       const images = project.mediaThumbs.map(src => ({ type:'image', src }));
-      const videos = Array.isArray(project.mediaVideos)
-        ? project.mediaVideos
-        : [ project.mediaVideos ];
+      const videosRaw = project.mediaVideos ?? project.mediaVideo;
+      const videos    = Array.isArray(videosRaw) 
+        ? videosRaw 
+        : [ videosRaw ].filter(Boolean);
 
       // each video will become one tile
       const videoItems = videos.map(src => ({ type:'video', src }));
@@ -658,12 +662,35 @@
         grid.appendChild(div);
       });
 
+      let current = 0;
       const thumbs   = Array.from(document.querySelectorAll('.media-thumb'));
+      const lbClose = document.getElementById('lb-close');
       const lightbox = document.getElementById('lightbox');
       const lbImg    = document.getElementById('lb-img');
       const lbVid    = document.getElementById('lb-vid');
       const lbFrame  = document.getElementById('lb-iframe');
 
+      lbClose.addEventListener('click', () => {
+      lightbox.classList.remove('visible');
+
+      // pause & reset the native <video>
+      if (lbVid) {
+        lbVid.pause();
+        lbVid.currentTime = 0;
+      }
+
+      // stop any iframe (Vimeo/YouTube) by clearing its src
+      if (lbFrame) {
+        lbFrame.src = '';
+      }
+    });
+
+    // 2) Clicking backdrop
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) {
+        lbClose.click();    // re-use the same logic
+      }
+    });
       function showLightbox(idx) {
         current = idx;
         const { type, src } = thumbs[idx].dataset;
