@@ -465,9 +465,20 @@
 
     <div id="lightbox" class="lightbox">
       <button id="lb-close" class="lb-btn lb-close">✕</button>
-      <button id="lb-prev"  class="lb-btn lb-nav">‹</button>
-      <img   id="lb-img"   class="lb-img" src="" alt="" />
-      <video id="lb-vid"   class="lb-img" controls style="display:none"></video>
+      <button id="lb-prev"   class="lb-btn lb-nav">‹</button>
+
+      <!-- for images -->
+      <img   id="lb-img"   class="lb-img" src=""    alt="" />
+
+      <!-- <iframe> for Vimeo embeds -->
+      <iframe
+        id="lb-iframe"
+        class="lb-img"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        style="display:none"
+      ></iframe>
+
       <button id="lb-next"  class="lb-btn lb-nav">›</button>
     </div>
 
@@ -598,52 +609,58 @@
       // (B) render them
       media.forEach((item, idx) => {
         const div = document.createElement('div');
-div.classList.add('media-thumb');
-div.dataset.type  = item.type; // 'image' or 'video'
-div.dataset.src   = item.src;
-div.dataset.index = idx;
+        div.classList.add('media-thumb');
+        div.dataset.type  = item.type; // 'image' or 'video'
+        div.dataset.src   = item.src;
+        div.dataset.index = idx;
 
-if (item.type === 'image') {
-  const img = document.createElement('img');
-  img.src = item.src;
-  div.appendChild(img);
+        if (item.type === 'image') {
+          const img = document.createElement('img');
+          img.src = item.src;
+          div.appendChild(img);
 
-} else { // video → embed Vimeo
-  const iframe = document.createElement('iframe');
-  iframe.src           = item.src;     // your Vimeo URL
-  iframe.frameBorder   = 0;
-  iframe.allow         = 'fullscreen';
-  iframe.allowFullscreen = true;
-  iframe.style.width   = '100%';
-  iframe.style.height  = '100%';
-  div.appendChild(iframe);
-}
+        } else { // video → embed Vimeo
+          const iframe = document.createElement('iframe');
+          iframe.src           = item.src;     // your Vimeo URL
+          iframe.frameBorder   = 0;
+          iframe.allow         = 'fullscreen';
+          iframe.allowFullscreen = true;
+          iframe.style.width   = '100%';
+          iframe.style.height  = '100%';
+          div.appendChild(iframe);
+        }
 
-grid.appendChild(div);
+        grid.appendChild(div);
       });
 
       const thumbs   = Array.from(document.querySelectorAll('.media-thumb'));
       const lightbox = document.getElementById('lightbox');
       const lbImg    = document.getElementById('lb-img');
       const lbVid    = document.getElementById('lb-vid');
+      const lbFrame  = document.getElementById('lb-iframe');
       let   current  = 0;
 
       function showLightbox(idx) {
         current = idx;
         const { type, src } = thumbs[idx].dataset;
 
+        // hide everything
+        [lbImg, lbVid, lbFrame].forEach(el => el.style.display = 'none');
+
         if (type === 'image') {
-          lbVid.pause();
-          lbVid.style.display = 'none';
+          lbImg.src            = src;
+          lbImg.style.display  = 'block';
 
-          lbImg.src           = src;
-          lbImg.style.display = 'block';
+        } else if (src.includes('player.vimeo.com')) {
+          // Vimeo embed
+          lbFrame.src          = src;
+          lbFrame.style.display = 'block';
+
         } else {
-          lbImg.style.display = 'none';
-
-          lbVid.src           = src;
-          lbVid.style.display = 'block';
-          lbVid.currentTime   = 0;
+          // fallback to native video
+          lbVid.src            = src;
+          lbVid.style.display  = 'block';
+          lbVid.currentTime    = 0;
           lbVid.play();
         }
 
