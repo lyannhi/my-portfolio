@@ -38,8 +38,8 @@ const projectsData = [
       'img/projects/alae_silentes/8.jpeg'
     ],
     mediaVideos: [
-      'https://player.vimeo.com/video/1091824441?title=0&byline=0&portrait=0',
-      'https://player.vimeo.com/video/1091786100?title=0&byline=0&portrait=0'
+      'https://youtu.be/NH7QO1Kzq8g',
+      'https://youtu.be/yR62s5UImNc'
     ],
   },
 
