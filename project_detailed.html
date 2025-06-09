@@ -220,6 +220,13 @@
       object-fit: contain;
     }
 
+
+    .media-thumb[data-type="video"] iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
     .lightbox {
       position: fixed;
       top:0; left:0;
@@ -603,13 +610,12 @@ if (item.type === 'image') {
 
 } else { // video → embed Vimeo
   const iframe = document.createElement('iframe');
-  iframe.src           = item.src;                       // from project_data.js
+  iframe.src           = item.src;     // your Vimeo URL
   iframe.frameBorder   = 0;
-  iframe.allow         = 'autoplay; fullscreen';
+  iframe.allow         = 'fullscreen';
   iframe.allowFullscreen = true;
-  // make it fill the thumbnail container
-  iframe.style.width  = '100%';
-  iframe.style.height = '100%';
+  iframe.style.width   = '100%';
+  iframe.style.height  = '100%';
   div.appendChild(iframe);
 }
 
