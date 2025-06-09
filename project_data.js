@@ -56,14 +56,15 @@ const projectsData = [
       UX flows, front-end implementation (HTML/CSS/JS), and integrated PHP/MySQL for
       user accounts, order management, and wishlist functionality.`,
     metadata: {
-      type: 'Solo UX/UI Project',
-      duration: '4 months (02/2025 – 06/2025)',
+      type: 'Group Project',
+      duration: '3 months (3/2025 – 5/2025)',
       scope: [
         'Wireframing & Prototyping',
-        'Front-end HTML/CSS/JS',
+        'Front-end  HTML/CSS/JS',
         'PHP/MySQL Backend Integration',
-        'Gemini AI Chatbot Implementation',
-        'Google Maps API Integration'
+        "Developing User Experience",
+        'Gemini AI Implementation',
+        'Testing User Experience'
       ]
     },
     thumbnail: 'img/other2.jpg',
@@ -80,9 +81,13 @@ const projectsData = [
       patterns. I designed eight icons that represent the essence of daily emotions, crafted
       entirely in Adobe Illustrator with a focus on minimalism and cultural symbolism.`,
     metadata: {
-      type: 'Personal Illustration',
-      duration: '1 month (12/2022 – 01/2023)',
-      scope: ['Concept & Sketching', 'Vector Illustration', 'Final Export & Delivery']
+      type: 'Personal Project',
+      duration: '3 weeks (3/2023)',
+      scope: [
+        'Concept & Sketching', 
+        'Vector Illustration', 
+        'Final Export & Delivery'
+      ]
     },
     thumbnail: 'img/other3.jpg',
     mediaThumbs: [/* … */],
@@ -99,9 +104,14 @@ const projectsData = [
       and community celebrations. I was responsible for concept sketches, final layouts,
       and color grading.`,
     metadata: {
-      type: 'Class Assignment',
-      duration: '2 months (06/2024 – 08/2024)',
-      scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
+      type: 'Personal Project',
+      duration: '1 week (12/2024)',
+      scope: [
+        'Research & Concept', 
+        'Neighborhood Researcher',
+        'Visual Developing',
+        'Layout Designer'
+      ]
     },
     thumbnail: 'img/other4.jpg',
     mediaThumbs: [/* … */],
@@ -118,9 +128,12 @@ const projectsData = [
       and community celebrations. I was responsible for concept sketches, final layouts,
       and color grading.`,
     metadata: {
-      type: 'Class Assignment',
-      duration: '2 months (06/2024 – 08/2024)',
-      scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
+      type: 'Personal Project',
+      duration: '2 days (05/2025)',
+      scope: [
+        'Photographer', 
+        'Editor'
+      ]
     },
     thumbnail: 'img/other4.jpg',
     mediaThumbs: [/* … */],
@@ -128,7 +141,7 @@ const projectsData = [
   },
   {
     id: 'character-animation',
-    title: '3D Character Animation',
+    title: 'Sologramy - 3D Animation Character',
     category: '3D Design',
     year: '2024',
     description: `A three-poster series capturing the vibrant street life of Ton Dan in District 4.
@@ -136,9 +149,13 @@ const projectsData = [
       and community celebrations. I was responsible for concept sketches, final layouts,
       and color grading.`,
     metadata: {
-      type: 'Class Assignment',
-      duration: '2 months (06/2024 – 08/2024)',
-      scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
+      type: 'Personal Project',
+      duration: '5 weeks (3/2024 - 4/2024)',
+      scope: [
+        'Research & Concept', 
+        '3D Modeller and Animator', 
+        'Visual Developing'
+      ]
     },
     thumbnail: 'img/other4.jpg',
     mediaThumbs: [/* … */],
@@ -154,9 +171,14 @@ const projectsData = [
       and community celebrations. I was responsible for concept sketches, final layouts,
       and color grading.`,
     metadata: {
-      type: 'Class Assignment',
-      duration: '2 months (06/2024 – 08/2024)',
-      scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
+      type: 'Group Project',
+      duration: '3 weeks (5/2024)',
+      scope: [
+        'Research & Concept', 
+        'Visual Developing', 
+        'Mapping Arena Resolume',
+        'VJ Performer'
+      ]
     },
     thumbnail: 'img/other4.jpg',
     mediaThumbs: [/* … */],
@@ -172,9 +194,13 @@ const projectsData = [
       and community celebrations. I was responsible for concept sketches, final layouts,
       and color grading.`,
     metadata: {
-      type: 'Class Assignment',
-      duration: '2 months (06/2024 – 08/2024)',
-      scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
+      type: 'Personal Project',
+      duration: '4 weeks (7/2024)',
+      scope: [
+        'Research & Concept', 
+        'Digital Painting', 
+        'Print-ready Export'
+      ]
     },
     thumbnail: 'img/other4.jpg',
     mediaThumbs: [/* … */],
@@ -190,8 +216,8 @@ const projectsData = [
       and community celebrations. I was responsible for concept sketches, final layouts,
       and color grading.`,
     metadata: {
-      type: 'Class Assignment',
-      duration: '2 months (06/2024 – 08/2024)',
+      type: 'Personal Project',
+      duration: '1 week (08/2024)',
       scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
     },
     thumbnail: 'img/other4.jpg',
@@ -200,7 +226,7 @@ const projectsData = [
   },
   {
     id: 'book-cover',
-    title: 'Redesign Book Cover (dear,darling)',
+    title: 'Redesign Book Cover (dear, darling)',
     category: '2D Illustration',
     year: '2024',
     description: `A three-poster series capturing the vibrant street life of Ton Dan in District 4.
@@ -208,8 +234,8 @@ const projectsData = [
       and community celebrations. I was responsible for concept sketches, final layouts,
       and color grading.`,
     metadata: {
-      type: 'Class Assignment',
-      duration: '2 months (06/2024 – 08/2024)',
+      type: 'Personal Project',
+      duration: '1 week (11/2024)',
       scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
     },
     thumbnail: 'img/other4.jpg',
@@ -226,8 +252,8 @@ const projectsData = [
       and community celebrations. I was responsible for concept sketches, final layouts,
       and color grading.`,
     metadata: {
-      type: 'Class Assignment',
-      duration: '2 months (06/2024 – 08/2024)',
+      type: 'Personal Project',
+      duration: '3 days (1/2025)',
       scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
     },
     thumbnail: 'img/other4.jpg',
@@ -262,8 +288,8 @@ const projectsData = [
       and community celebrations. I was responsible for concept sketches, final layouts,
       and color grading.`,
     metadata: {
-      type: 'Class Assignment',
-      duration: '2 months (06/2024 – 08/2024)',
+      type: 'Personal Project',
+      duration: '5 days (12/2024)',
       scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
     },
     thumbnail: 'img/other4.jpg',
