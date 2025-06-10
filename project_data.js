@@ -51,10 +51,15 @@ const projectsData = [
     title: 'Vietnam Worship Website',
     category: 'UI/UX Design',
     year: '2025',
-    description: `A fully responsive worship e-commerce web platform offering pre-prepared worship packs,
-      detailed ritual guides, AI chatbot support, and temple location services. I handled
-      UX flows, front-end implementation (HTML/CSS/JS), and integrated PHP/MySQL for
-      user accounts, order management, and wishlist functionality.`,
+    description: `Vietnam Worship Platform is a responsive, one-stop e-commerce solution 
+    that simplifies traditional Vietnamese rituals by delivering pre-prepared packs, 
+    individual items, and on-demand blessing services to users’ doorsteps. It includes step-by-step 
+    ritual guides, an AI chatbot for instant support, and integrated temple location services. 
+    I designed the UX, built the mobile-first front end (HTML/CSS/JS), and developed the PHP/MySQL 
+    back end for authentication, orders, subscriptions, and wishlist management.<br>
+    <a href="https://dms.onl/WorshipEcommerce/" target="_blank" rel="noopener" style="color:#F3F3F3; opacity: 0.5;">
+      Visit the website now
+    </a>`,
     metadata: {
       type: 'Group Project',
       duration: '3 months (3/2025 – 5/2025)',
@@ -67,9 +72,20 @@ const projectsData = [
         'Testing User Experience'
       ]
     },
-    thumbnail: 'img/other2.jpg',
-    mediaThumbs: [/* … */],
-    mediaVideo: 'img/vietnam-worship-video-poster.jpg'
+    thumbnail: 'img/projects/vietnam_worship_website/cover.png',
+    mediaThumbs: [
+      'img/projects/vietnam_worship_website/0.png',
+      'img/projects/vietnam_worship_website/0-1.png',
+      'img/projects/vietnam_worship_website/1.png',
+      'img/projects/vietnam_worship_website/2.png',
+      'img/projects/vietnam_worship_website/3.png',
+      'img/projects/vietnam_worship_website/4.png',
+      'img/projects/vietnam_worship_website/5.png',
+      'img/projects/vietnam_worship_website/6.png',
+      'img/projects/vietnam_worship_website/7.png',
+      'img/projects/vietnam_worship_website/8.png',
+      'img/projects/vietnam_worship_website/9.png'
+    ]
   },
 
   {
