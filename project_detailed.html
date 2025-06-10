@@ -582,7 +582,9 @@
 
       // 2) Fill in title, description, meta, media grid
       document.getElementById('jsProjectTitle').textContent = project.title;
-      document.getElementById('jsProjectDescription').textContent = project.description;
+      document
+        .getElementById('jsProjectDescription')
+        .innerHTML = project.description;
 
       const metaContainer = document.getElementById('jsProjectMeta');
       const makeLabel = labelText => {
