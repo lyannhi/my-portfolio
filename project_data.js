@@ -139,10 +139,14 @@ const projectsData = [
     title: 'RMIT Fitness Assessment',
     category: 'Photography',
     year: '2025',
-    description: `A three-poster series capturing the vibrant street life of Ton Dan in District 4.
-      By blending hand-drawn textures with digital painting, I highlighted markets, pagodas,
-      and community celebrations. I was responsible for concept sketches, final layouts,
-      and color grading.`,
+    description: `For the RMIT Fitness Assessment,  I was the sole photographer and editor for the 
+    collaborative event between RMIT and Lecao Athletics Base (LAB). I captured dynamic athlete moments, 
+    facility setups, and candid behind-the-scenes interactions, then refined each image to highlight 
+    the energy and professionalism of the assessment. The resulting photo series showcases the seamless 
+    blend of academic rigor and athletic excellence at the heart of this partnership.<br>
+    <a href="https://drive.google.com/drive/folders/1LffvIb9yzCDNaRv750CbNAVi9PeIv4Zc?usp=sharing" target="_blank" rel="noopener" style="color:#F3F3F3; opacity: 0.5;">
+      View full album here
+    </a>`,
     metadata: {
       type: 'Personal Project',
       duration: '2 days (05/2025)',
@@ -151,9 +155,21 @@ const projectsData = [
         'Editor'
       ]
     },
-    thumbnail: 'img/other4.jpg',
-    mediaThumbs: [/* … */],
-    mediaVideo: 'img/ton-dan-video-poster.jpg'
+    thumbnail: 'img/projects/fitness_assessment/cover.png',
+    mediaThumbs: [
+      'img/projects/fitness_assessment/1.png',
+      'img/projects/fitness_assessment/2.png',
+      'img/projects/fitness_assessment/9.png',
+      'img/projects/fitness_assessment/4.png',
+      'img/projects/fitness_assessment/5.png',
+      'img/projects/fitness_assessment/6.png',
+      'img/projects/fitness_assessment/7.png',
+      'img/projects/fitness_assessment/11.png',
+      'img/projects/fitness_assessment/10.png',
+      'img/projects/fitness_assessment/3.png',
+      'img/projects/fitness_assessment/8.png',
+      'img/projects/fitness_assessment/12.png'
+    ]
   },
   {
     id: 'character-animation',
