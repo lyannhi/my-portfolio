@@ -58,7 +58,7 @@ const projectsData = [
     I designed the UX, built the mobile-first front end (HTML/CSS/JS), and developed the PHP/MySQL 
     back end for authentication, orders, subscriptions, and wishlist management.<br>
     <a href="https://dms.onl/WorshipEcommerce/" target="_blank" rel="noopener" style="color:#F3F3F3; opacity: 0.5;">
-      Visit the website now
+      [ Visit the website now ]
     </a>`,
     metadata: {
       type: 'Group Project',
@@ -145,7 +145,7 @@ const projectsData = [
     the energy and professionalism of the assessment. The resulting photo series showcases the seamless 
     blend of academic rigor and athletic excellence at the heart of this partnership.<br>
     <a href="https://drive.google.com/drive/folders/1LffvIb9yzCDNaRv750CbNAVi9PeIv4Zc?usp=sharing" target="_blank" rel="noopener" style="color:#F3F3F3; opacity: 0.5;">
-      View full album here
+      [ View full album here ]
     </a>`,
     metadata: {
       type: 'Personal Project',
