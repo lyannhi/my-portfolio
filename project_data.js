@@ -149,10 +149,13 @@ const projectsData = [
     </a>`,
     metadata: {
       type: 'Personal Project',
-      duration: '2 days (05/2025)',
+      duration: '3 days (05/2025)',
       scope: [
-        'Photographer', 
-        'Editor'
+        'Sole Event Photographer', 
+        'Concept & Shot List Development',
+        'Post-Production Editing',
+        'Asset Management & Delivery',
+        'Client Liaison'
       ]
     },
     thumbnail: 'img/projects/fitness_assessment/cover.png',
