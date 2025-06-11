@@ -134,23 +134,40 @@ const projectsData = [
     title: 'Poster series: Ton Dan – District 4',
     category: '2D Illustration',
     year: '2024',
-    description: `A three-poster series capturing the vibrant street life of Ton Dan in District 4.
-      By blending hand-drawn textures with digital painting, I highlighted markets, pagodas,
-      and community celebrations. I was responsible for concept sketches, final layouts,
-      and color grading.`,
+    description: `This four-poster collection uncovers the hidden history, vibrant culture, and everyday 
+    rituals of Tôn Đản in Ho Chi Minh City. Each design pairs modern minimalism with symbolic imagery-moving 
+    beyond familiar landmarks to spotlight lesser-known stories and local character. By weaving fresh visuals 
+    and conceptual storytelling, the series invites viewers to explore and connect with the spirit of 
+    this dynamic neighborhood.`,
     metadata: {
       type: 'Personal Project',
       duration: '1 week (12/2024)',
       scope: [
-        'Research & Concept', 
-        'Neighborhood Researcher',
-        'Visual Developing',
-        'Layout Designer'
+        'Research & concept development', 
+        'Sketching & ideation',
+        'Digital illustration & layout',
+        'Typography selection & color palette'
       ]
     },
-    thumbnail: 'img/other4.jpg',
-    mediaThumbs: [/* … */],
-    mediaVideo: 'img/ton-dan-video-poster.jpg'
+    thumbnail: 'img/projects/ton-dan-district-4/15.png',
+    mediaThumbs: [
+      'img/projects/ton-dan-district-4/1.png',
+      'img/projects/ton-dan-district-4/2.png',
+      'img/projects/ton-dan-district-4/3.png',
+      'img/projects/ton-dan-district-4/4.png',
+      'img/projects/ton-dan-district-4/5.png',
+      'img/projects/ton-dan-district-4/6.png',
+      'img/projects/ton-dan-district-4/7.png',
+      'img/projects/ton-dan-district-4/8.png',
+      'img/projects/ton-dan-district-4/9.png',
+      'img/projects/ton-dan-district-4/10.png',
+      'img/projects/ton-dan-district-4/11.png',
+      'img/projects/ton-dan-district-4/12.png',
+      'img/projects/ton-dan-district-4/13.png',
+      'img/projects/ton-dan-district-4/14.png',
+      'img/projects/ton-dan-district-4/15.png',
+      'img/projects/ton-dan-district-4/16.png'
+    ]
   },
 
   {
@@ -385,21 +402,45 @@ const projectsData = [
   },
   {
     id: 'social-post',
-    title: 'Social Post for RED',
+    title: 'Social Posts for RED',
     category: '2D Illustration',
-    year: '2024',
-    description: `A three-poster series capturing the vibrant street life of Ton Dan in District 4.
-      By blending hand-drawn textures with digital painting, I highlighted markets, pagodas,
-      and community celebrations. I was responsible for concept sketches, final layouts,
-      and color grading.`,
+    year: '2024 - 2025',
+    description: `Over the course of a year as Main Designer in RED Core Team’s Media Office, 
+    I spearheaded the visual strategy for our social media presence-conceptualizing and producing 
+    dozens of posts that drove student engagement and amplified club events. From original illustrations 
+    and layouts to typography and color schemes, I crafted a cohesive, on-brand look that ran across 
+    Facebook, Instagram, and event promotions. By leading art direction, creative ideation, and final 
+    execution, I helped RED build a vibrant, recognizable voice online.`,
     metadata: {
       type: 'Personal Project',
-      duration: '2 months (06/2024 – 08/2024)',
-      scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
+      duration: '08/2024 – 04/2025',
+      scope: [
+        'Concept Development', 
+        'Digital Painting', 
+        '2D Illustration',
+        'Photographer',
+        'Editor'
+      ]
     },
-    thumbnail: 'img/other4.jpg',
-    mediaThumbs: [/* … */],
-    mediaVideo: 'img/ton-dan-video-poster.jpg'
+    thumbnail: 'img/projects/social_post/8.png',
+    mediaThumbs: [
+      'img/projects/social_post/1.png',
+      'img/projects/social_post/2.png',
+      'img/projects/social_post/3.png',
+      'img/projects/social_post/4.png',
+      'img/projects/social_post/5.png',
+      'img/projects/social_post/6.png',
+      'img/projects/social_post/7.png',
+      'img/projects/social_post/8.png',
+      'img/projects/social_post/9.png',
+      'img/projects/social_post/10.png',
+      'img/projects/social_post/11.png',
+      'img/projects/social_post/12.png',
+      'img/projects/social_post/13.png',
+      'img/projects/social_post/14.png',
+      'img/projects/social_post/15.png',
+      'img/projects/social_post/16.png'
+    ]
   },
   {
     id: 'hierarchy-layout',
