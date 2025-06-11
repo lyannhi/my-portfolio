@@ -93,9 +93,11 @@ const projectsData = [
     title: 'Set of icons: Dusha',
     category: '2D Illustration',
     year: '2023',
-    description: `A custom icon set named “Dusha” inspired by Vietnamese folklore and geometric
-      patterns. I designed eight icons that represent the essence of daily emotions, crafted
-      entirely in Adobe Illustrator with a focus on minimalism and cultural symbolism.`,
+    description: `Dusha is a custom set of eight flower icons inspired by the enduring personalities 
+    of Vietnamese women preserved through generations. I designed each icon to capture a distinct 
+    characteristic, crafting minimalist floral forms in Adobe Illustrator that balance clean geometry 
+    with subtle cultural symbolism. This collection celebrates the soul beauty of Vietnamese women, 
+    offering versatile tokens ideal as personal keepsakes or thoughtful gifts.`,
     metadata: {
       type: 'Personal Project',
       duration: '3 weeks (3/2023)',
@@ -105,9 +107,25 @@ const projectsData = [
         'Final Export & Delivery'
       ]
     },
-    thumbnail: 'img/other3.jpg',
-    mediaThumbs: [/* … */],
-    mediaVideo: 'img/dusha-video-poster.jpg'
+    thumbnail: 'img/projects/dusha/cover.png',
+    mediaThumbs: [
+      'img/projects/dusha/1.png',
+      'img/projects/dusha/2.png',
+      'img/projects/dusha/3.png',
+      'img/projects/dusha/4.png',
+      'img/projects/dusha/5.png',
+      'img/projects/dusha/6.png',
+      'img/projects/dusha/7.png',
+      'img/projects/dusha/8.png',
+      'img/projects/dusha/9.png',
+      'img/projects/dusha/10.png',
+      'img/projects/dusha/13.png',
+      'img/projects/dusha/16.png',
+      'img/projects/dusha/14.png',
+      'img/projects/dusha/11.png',
+      'img/projects/dusha/15.png',
+      'img/projects/dusha/12.png'
+    ]
   },
 
   {
@@ -140,7 +158,7 @@ const projectsData = [
     category: 'Photography',
     year: '2025',
     description: `For the RMIT Fitness Assessment,  I was the sole photographer and editor for the 
-    collaborative event between RMIT and Lecao Athletics Base (LAB). I captured dynamic athlete moments, 
+    collaborative event between RMIT x Lecao Athletics Base (LAB). I captured dynamic athlete moments, 
     facility setups, and candid behind-the-scenes interactions, then refined each image to highlight 
     the energy and professionalism of the assessment. The resulting photo series showcases the seamless 
     blend of academic rigor and athletic excellence at the heart of this partnership.<br>
