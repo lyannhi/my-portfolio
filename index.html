@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
-    // swap out any incoming fragment ≠ #home
-    if (location.hash && location.hash !== '#home') {
-      history.replaceState(null, '', location.pathname + '#home');
-    }
-    window.scrollTo(0, 0);
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
@@ -1146,6 +1136,14 @@
 
   <script src="project_data.js"></script>
   <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    // swap out any incoming fragment ≠ #home
+    if (location.hash && location.hash !== '#home') {
+      history.replaceState(null, '', location.pathname + '#home');
+    }
+    window.scrollTo(0, 0);
     document.documentElement.style.scrollBehavior = 'smooth';
     document.addEventListener('DOMContentLoaded', () => {
       // ─────────────────────────────────────────────────────────────────────
