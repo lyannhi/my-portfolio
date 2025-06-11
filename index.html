@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    // swap out any incoming fragment ≠ #home
+    if (location.hash && location.hash !== '#home') {
+      history.replaceState(null, '', location.pathname + '#home');
+    }
+    window.scrollTo(0, 0);
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
@@ -1136,16 +1146,19 @@
 
   <script src="project_data.js"></script>
   <script>
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
-    // swap out any incoming fragment ≠ #home
-    if (location.hash && location.hash !== '#home') {
-      history.replaceState(null, '', location.pathname + '#home');
-    }
-    window.scrollTo(0, 0);
-    document.documentElement.style.scrollBehavior = 'smooth';
+    // 1) When the page is hidden (about to be cached), reset scroll
+    window.addEventListener('pagehide', () => {
+      window.scrollTo(0, 0);
+    });
+
+    // 2) When the page is restored from cache, also reset scroll
+    window.addEventListener('pageshow', (evt) => {
+      if (evt.persisted) {
+        window.scrollTo(0, 0);
+      }
+    });
     document.addEventListener('DOMContentLoaded', () => {
+      document.documentElement.style.scrollBehavior = 'smooth';
       // ─────────────────────────────────────────────────────────────────────
       // (A) Render “All my works” cards into #worksGridContainer
       // ─────────────────────────────────────────────────────────────────────
