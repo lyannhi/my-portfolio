@@ -256,10 +256,12 @@ const projectsData = [
     title: 'VJ Live Performance',
     category: '3D Design',
     year: '2024',
-    description: `A three-poster series capturing the vibrant street life of Ton Dan in District 4.
-      By blending hand-drawn textures with digital painting, I highlighted markets, pagodas,
-      and community celebrations. I was responsible for concept sketches, final layouts,
-      and color grading.`,
+    description: `For my VJ Live Performance, I conceived and executed a live audiovisual set that fuses 
+    a driving electronic track, “We Have Lost All Control”, with real-time 3D visuals triggered via MIDI. 
+    Each musical segment animates generative scenes charting a protagonist’s futile struggle to escape 
+    manipulation, isolation, and the inescapable pull of control. In the roles of ideator, 3D designer, 
+    visual jockey, and MIDI performer, I synchronized every element on the fly, crafting an immersive narrative 
+    that challenges audiences to reflect on vulnerability, resilience, and the power of self-awareness.`,
     metadata: {
       type: 'Group Project',
       duration: '3 weeks (5/2024)',
@@ -270,9 +272,17 @@ const projectsData = [
         'VJ Performer'
       ]
     },
-    thumbnail: 'img/other4.jpg',
-    mediaThumbs: [/* … */],
-    mediaVideo: 'img/ton-dan-video-poster.jpg'
+    thumbnail: 'img/projects/vj/cover.png',
+    mediaThumbs: [
+      'img/projects/vj/1.png',
+      'img/projects/vj/2.png',
+      'img/projects/vj/3.png',
+      'img/projects/vj/4.png',
+      'img/projects/vj/5.png',
+      'img/projects/vj/6.png',
+      'img/projects/vj/7.png'
+    ],
+    mediaVideo: 'https://youtu.be/Wja7je-NdXM'
   },
   {
     id: 'golden-memo',
@@ -322,18 +332,37 @@ const projectsData = [
     title: 'Commercial Product Photography',
     category: 'Photography',
     year: '2024',
-    description: `A three-poster series capturing the vibrant street life of Ton Dan in District 4.
-      By blending hand-drawn textures with digital painting, I highlighted markets, pagodas,
-      and community celebrations. I was responsible for concept sketches, final layouts,
-      and color grading.`,
+    description: `In this commercial product photography exercise, I captured two distinct product 
+    types, a lotus-seed coconut water and a delicate silver bow necklace, to explore how styling, lighting, 
+    and composition communicate brand personality. For the coconut water, I evoked a sun-lit beach scene 
+    with palm-leaf shadows, lotus seeds, and textured props to suggest refreshment and leisure. For the 
+    jewelry, I paired pastel fabrics with mirrored surfaces to accentuate the silver’s gleam and lend a 
+    dreamy, feminine feel. Through thoughtful light control and prop selection, each shot highlights the 
+    product’s unique appeal for commercial use.`,
     metadata: {
       type: 'Personal Project',
       duration: '1 week (08/2024)',
-      scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
+      scope: [
+        'Concept & styling development', 
+        'Prop sourcing and set design', 
+        'Lighting design and setup',
+        'Camera operation and composition',
+        'On-site shoot execution and shot direction',
+        'Color correction, retouching, and mirror-surface cleanup'
+      ]
     },
-    thumbnail: 'img/other4.jpg',
-    mediaThumbs: [/* … */],
-    mediaVideo: 'img/ton-dan-video-poster.jpg'
+    thumbnail: 'img/projects/commercial_photo/cover.png',
+    mediaThumbs: [
+      'img/projects/commercial_photo/1.png',
+      'img/projects/commercial_photo/2.png',
+      'img/projects/commercial_photo/3.png',
+      'img/projects/commercial_photo/4.png',
+      'img/projects/commercial_photo/5.png',
+      'img/projects/commercial_photo/6.png',
+      'img/projects/commercial_photo/7.png',
+      'img/projects/commercial_photo/8.png',
+      'img/projects/commercial_photo/9.png'
+    ]
   },
   {
     id: 'book-cover',
