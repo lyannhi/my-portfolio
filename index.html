@@ -10,6 +10,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.typekit.net/uix6jmv.css">
+    <script>
+    // stop Safari/Chrome from auto-scrolling to any hash
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    // if they landed with #works (or any #≠home), replace it now
+    if (location.hash && location.hash !== '#home') {
+      history.replaceState(null, '', location.pathname + '#home');
+    }
+    // snap viewport to top
+    window.scrollTo(0, 0);
+  </script>
   <style>
     /* Reset & Box Sizing */
     *,
@@ -1138,29 +1150,6 @@
   <script src="project_data.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // disable history‐restore once
-      if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
-      }
-
-      let didReset = false;
-      function resetOnce() {
-        if (didReset) return;
-        didReset = true;
-
-        if (location.hash && location.hash !== '#home') {
-          history.replaceState(null, '', location.pathname + '#home');
-        }
-        window.scrollTo(0, 0);
-
-        // after resetting, re‐enable normal scroll restoration
-        if ('scrollRestoration' in history) {
-          history.scrollRestoration = 'auto';
-        }
-      }
-
-      window.addEventListener('load', () => setTimeout(resetOnce, 50));
-      window.addEventListener('pageshow', evt => evt.persisted && setTimeout(resetOnce, 50));
       // ─────────────────────────────────────────────────────────────────────
       // (A) Render “All my works” cards into #worksGridContainer
       // ─────────────────────────────────────────────────────────────────────
