@@ -1138,6 +1138,19 @@
   <script src="project_data.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // turn off browser “restore scroll on history”
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+
+      window.addEventListener('load', () => {
+        // if there’s any hash other than #home, replace it
+        if (location.hash && location.hash !== '#home') {
+          history.replaceState(null, '', location.pathname + '#home');
+        }
+        // scroll to the top section
+        document.getElementById('home').scrollIntoView({behavior: 'auto'});
+      });
       // ─────────────────────────────────────────────────────────────────────
       // (A) Render “All my works” cards into #worksGridContainer
       // ─────────────────────────────────────────────────────────────────────
