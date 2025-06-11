@@ -907,6 +907,17 @@
       .works-title { font-size: 7rem; margin: 0 0 0 8rem; }
       .works-grid { grid-template-columns: repeat(2, 1fr); }
     }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
   </style>
 </head>
 <body>
@@ -954,13 +965,13 @@
 
     <section id="about">
         <!-- LEFT COLUMN: Subtitle + Name -->
-        <div class="about-left">
+        <div class="about-left fade">
         <div class="intro-subtitle">A pleasure to meet you, I’m…</div>
         <div class="main-name">Lý An Nhi</div>
         </div>
 
         <!-- RIGHT COLUMN: Rotated Image + Two Paragraphs -->
-        <div class="about-right">
+        <div class="about-right fade">
             <!-- Rotated “photo” placeholder -->
             <div class="about-photo"></div>
 
@@ -984,7 +995,7 @@
             </div>
         </div>
 
-        <div class="about-tabs">
+        <div class="about-tabs fade">
             <ul class="tab-list">
                 <li class="tab-item active" data-tab="education">Education</li>
                 <li class="tab-item" data-tab="experience">Experience</li>
@@ -1070,21 +1081,21 @@
 
     <section id="works">
         <div class="works-container">
-            <div class="quote-line1">“Bridging</div>
-            <div class="quote-line2">heritage and innovation</div>
-            <div class="sep1"></div>
-            <div class="quote-line3">through</div>
-            <div class="quote-line4">simplicity and clarity</div>
-            <div class="sep2"></div>
-            <div class="quote-line5">in design.”</div>
+            <div class="quote-line1 fade">“Bridging</div>
+            <div class="quote-line2 fade">heritage and innovation</div>
+            <div class="sep1 fade"></div>
+            <div class="quote-line3 fade">through</div>
+            <div class="quote-line4 fade">simplicity and clarity</div>
+            <div class="sep2 fade"></div>
+            <div class="quote-line5 fade">in design.”</div>
         </div>
 
         <!-- ─────────── Works Carousel ─────────── -->
-        <div class="works-carousel" id="worksCarousel"></div>
+        <div class="works-carousel fade" id="worksCarousel"></div>
 
         <div class="works-header">
-            <h2 class="works-title">All my works</h2>
-            <div class="works-filter">
+            <h2 class="works-title fade">All my works</h2>
+            <div class="works-filter fade">
                 <ul>
                 <li class="filter-item active">All</li>
                 <li class="filter-item">UI/UX Design</li>
@@ -1097,7 +1108,7 @@
         </div>
 
         <!-- ─────────── WORKS GRID (2 rows, 3 columns) ─────────── -->
-        <div class="works-grid" id="worksGridContainer"></div>
+        <div class="works-grid fade" id="worksGridContainer"></div>
     </section>
 
     <!-- ─────────── FOOTER / CONTACT SECTION ─────────── -->
@@ -1379,7 +1390,26 @@
           });
         }
       }
-    });
+      const faders = document.querySelectorAll('.fade');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const r = entry.intersectionRatio;
+          // fade in at 30%…
+          if (r >= 0.2) {
+            entry.target.classList.add('visible');
+          }
+          // fade out when below 10%
+          else if (r <= 0.8) {
+            entry.target.classList.remove('visible');
+          }
+        });
+      }, {
+        // fire callback whenever ratio crosses any of these
+        threshold: [0, 0.2, 0.8, 1.0]
+      });
+
+      faders.forEach(el => observer.observe(el));
+          });
 
   </script>
 </body>
