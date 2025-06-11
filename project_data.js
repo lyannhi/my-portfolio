@@ -201,7 +201,7 @@ const projectsData = [
     description: `In this 3D character animation, I transform Thúy Kiều from Nguyễn Du’s Truyện Kiều 
     into an anti-heroine: her timeless Vietnamese grace now tempered by trauma-driven determination. 
     Betrayed and hardened, she strikes back at those who harm her yet fiercely shields the innocent. 
-    I sculpted, textured, rigged, and animated her in Blender, styling her in áo dài–inspired attire 
+    I sculpted, textured, rigged, and animated her in Blender, styling her in áo dài, inspired attire 
     and ritual accessories to blend cultural authenticity with dynamic motion, capturing both her 
     classical beauty and modern resilience.`,
     metadata: {
@@ -229,9 +229,10 @@ const projectsData = [
       'img/projects/character_animation/12.png',
       'img/projects/character_animation/13.png',
       'img/projects/character_animation/14.png',
-      'img/projects/character_animation/15.png'
+      'img/projects/character_animation/15.png',
+      'img/projects/character_animation/16.png'
     ],
-    mediaVideo: 'img/ton-dan-video-poster.jpg'
+    mediaVideo: 'https://youtu.be/Vpokl6Aj3wU'
   },
   {
     id: 'vj-performance',
