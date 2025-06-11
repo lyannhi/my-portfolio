@@ -1399,13 +1399,13 @@
             entry.target.classList.add('visible');
           }
           // fade out when below 10%
-          else if (r <= 0.8) {
+          else if (r <= 0.4) {
             entry.target.classList.remove('visible');
           }
         });
       }, {
         // fire callback whenever ratio crosses any of these
-        threshold: [0, 0.2, 0.8, 1.0]
+        threshold: [0, 0.2, 0.4, 1.0]
       });
 
       faders.forEach(el => observer.observe(el));
