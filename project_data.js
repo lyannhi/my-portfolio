@@ -262,22 +262,43 @@ const projectsData = [
     title: 'Golden Memo',
     category: '2D Illustration',
     year: '2024',
-    description: `A three-poster series capturing the vibrant street life of Ton Dan in District 4.
-      By blending hand-drawn textures with digital painting, I highlighted markets, pagodas,
-      and community celebrations. I was responsible for concept sketches, final layouts,
-      and color grading.`,
+    description: `“Golden Memo” is an interactive personal project built in p5.js that honors the 
+    daily struggles of the Biệt Động Sài Gòn unit during the war. By merging archival visuals with 
+    a futuristic color palette and custom soundscapes, users trigger generative audio - visual 
+    responses as they explore key moments and stories. This combination of history and technology 
+    not only rekindles gratitude for past sacrifices but also invites a new generation, both in Vietnam 
+    and beyond, to engage with our shared heritage through a modern, immersive lens.<br>
+       <a href="https://editor.p5js.org/lynhi1412004/full/VkwzLQVnf" target="_blank" rel="noopener" style="color:#F3F3F3; opacity: 0.5;">
+      [ Visit the live interaction ]
+    </a>`,
     metadata: {
       type: 'Personal Project',
-      duration: '4 weeks (7/2024)',
+      duration: '2 weeks (7/2024)',
       scope: [
-        'Research & Concept', 
-        'Digital Painting', 
-        'Print-ready Export'
+        'Historical research & concept development', 
+        'Archival asset curation', 
+        'Original soundscape composition',
+        'p5.js coding interaction',
+        'Planning interactive flow and controls'
       ]
     },
-    thumbnail: 'img/other4.jpg',
-    mediaThumbs: [/* … */],
-    mediaVideo: 'img/ton-dan-video-poster.jpg'
+    thumbnail: 'img/projects/golden_memo/cover.png',
+    mediaThumbs: [
+      'img/projects/golden_memo/1.png',
+      'img/projects/golden_memo/2.png',
+      'img/projects/golden_memo/3.png',
+      'img/projects/golden_memo/4.png',
+      'img/projects/golden_memo/5.png',
+      'img/projects/golden_memo/6.png',
+      'img/projects/golden_memo/7.png',
+      'img/projects/golden_memo/8.png',
+      'img/projects/golden_memo/9.png',
+      'img/projects/golden_memo/10.png',
+      'img/projects/golden_memo/11.png',
+      'img/projects/golden_memo/cover.png',
+      'img/projects/golden_memo/12.png',
+      'img/projects/golden_memo/13.png'
+    ]
   },
   {
     id: 'commercial-product-photo',
