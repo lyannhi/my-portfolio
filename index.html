@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    // swap out any incoming fragment ≠ #home
+    if (location.hash && location.hash !== '#home') {
+      history.replaceState(null, '', location.pathname + '#home');
+    }
+    window.scrollTo(0, 0);
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
@@ -10,18 +20,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.typekit.net/uix6jmv.css">
-    <script>
-    // 1) Disable any browser auto-scroll on hash
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
-    // 2) If they came in with #works (or anything ≠ #home), swap it now
-    if (location.hash && location.hash !== '#home') {
-      history.replaceState(null, '', location.pathname + '#home');
-    }
-    // 3) Force the scroll position to the very top
-    window.scrollTo(0, 0);
-  </script>
   <style>
     /* Reset & Box Sizing */
     *,
