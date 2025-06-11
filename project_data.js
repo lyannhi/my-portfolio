@@ -197,10 +197,12 @@ const projectsData = [
     title: 'Sologramy - 3D Animation Character',
     category: '3D Design',
     year: '2024',
-    description: `A three-poster series capturing the vibrant street life of Ton Dan in District 4.
-      By blending hand-drawn textures with digital painting, I highlighted markets, pagodas,
-      and community celebrations. I was responsible for concept sketches, final layouts,
-      and color grading.`,
+    description: `In this 3D character animation, I transform Thúy Kiều from Nguyễn Du’s Truyện Kiều 
+    into an anti-heroine: her timeless Vietnamese grace now tempered by trauma-driven determination. 
+    Betrayed and hardened, she strikes back at those who harm her yet fiercely shields the innocent. 
+    I sculpted, textured, rigged, and animated her in Blender, styling her in áo dài–inspired attire 
+    and ritual accessories to blend cultural authenticity with dynamic motion, capturing both her 
+    classical beauty and modern resilience.`,
     metadata: {
       type: 'Personal Project',
       duration: '5 weeks (3/2024 - 4/2024)',
@@ -210,8 +212,24 @@ const projectsData = [
         'Visual Developing'
       ]
     },
-    thumbnail: 'img/other4.jpg',
-    mediaThumbs: [/* … */],
+    thumbnail: 'img/projects/character_animation/14.png',
+    mediaThumbs: [
+      'img/projects/character_animation/1.png',
+      'img/projects/character_animation/2.png',
+      'img/projects/character_animation/3.png',
+      'img/projects/character_animation/4.png',
+      'img/projects/character_animation/5.png',
+      'img/projects/character_animation/6.png',
+      'img/projects/character_animation/7.png',
+      'img/projects/character_animation/8.png',
+      'img/projects/character_animation/9.png',
+      'img/projects/character_animation/10.png',
+      'img/projects/character_animation/11.png',
+      'img/projects/character_animation/12.png',
+      'img/projects/character_animation/13.png',
+      'img/projects/character_animation/14.png',
+      'img/projects/character_animation/15.png'
+    ],
     mediaVideo: 'img/ton-dan-video-poster.jpg'
   },
   {
@@ -279,39 +297,68 @@ const projectsData = [
   },
   {
     id: 'book-cover',
-    title: 'Redesign Book Cover (dear, darling)',
+    title: 'Redesign Book Cover (Dear, darling - Hiên)',
     category: '2D Illustration',
     year: '2024',
-    description: `A three-poster series capturing the vibrant street life of Ton Dan in District 4.
-      By blending hand-drawn textures with digital painting, I highlighted markets, pagodas,
-      and community celebrations. I was responsible for concept sketches, final layouts,
-      and color grading.`,
+    description: `I redesigned the cover of Dear, darling, blending hand-drawn textures 
+    with digital painting to capture the story’s intimate, romantic tone. My process 
+    spanned research and concept development, sketching and digital illustration, typographic 
+    refinement, and print-ready exports, resulting in a cohesive, emotionally resonant cover design.`,
     metadata: {
       type: 'Personal Project',
-      duration: '1 week (11/2024)',
-      scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
+      duration: '4 days (11/2024)',
+      scope: [
+        'Research & Concept Development', 
+        'Hand-drawn Texture Sketches', 
+        'Digital Painting & Composition',
+        'Typography & Layout Refinement'
+      ]
     },
-    thumbnail: 'img/other4.jpg',
-    mediaThumbs: [/* … */],
-    mediaVideo: 'img/ton-dan-video-poster.jpg'
+    thumbnail: 'img/projects/book_cover/cover.png',
+    mediaThumbs: [      
+      'img/projects/book_cover/1.png',
+      'img/projects/book_cover/4.png',
+      'img/projects/book_cover/2.jpg',
+      'img/projects/book_cover/5.jpg',
+      'img/projects/book_cover/3.jpg',
+      'img/projects/book_cover/6.jpg'
+    ],
   },
   {
     id: 'typhography-logo',
     title: 'Typography Logo',
     category: '2D Illustration',
     year: '2024',
-    description: `A three-poster series capturing the vibrant street life of Ton Dan in District 4.
-      By blending hand-drawn textures with digital painting, I highlighted markets, pagodas,
-      and community celebrations. I was responsible for concept sketches, final layouts,
-      and color grading.`,
+    description: `For the Typography Logo project, I created a bespoke wordmark for the fictional 
+    candle brand Hestia Glow, inspired by the Greek goddess of the hearth. Starting from hand-sketched 
+    letterforms that mimic the gentle flicker of a flame, I refined each curve and terminal in 
+    Illustrator to convey warmth, sanctuary, and artisanal care. The result is a clean, scalable 
+    typographic identity that captures the brand’s essence of glowing candlelight and timeless elegance.`,
     metadata: {
       type: 'Personal Project',
       duration: '3 days (1/2025)',
-      scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
+      scope: [
+        'Brand & concept development', 
+        'Hand-drawn letterform sketching', 
+        'Vectorization and digital refinement',
+        'Kerning, weight tuning, and structural adjustments',
+        'Color exploration and palette application',
+        'Creation of logo usage guidelines and export of print- and web-ready assets'
+      ]
     },
-    thumbnail: 'img/other4.jpg',
-    mediaThumbs: [/* … */],
-    mediaVideo: 'img/ton-dan-video-poster.jpg'
+    thumbnail: 'img/projects/typography_logo/9.jpg',
+    mediaThumbs: [
+      'img/projects/typography_logo/3.png',
+      'img/projects/typography_logo/4.png',
+      'img/projects/typography_logo/1.png',
+      'img/projects/typography_logo/5.jpg',
+      'img/projects/typography_logo/6.jpg',
+      'img/projects/typography_logo/7.jpg',
+      'img/projects/typography_logo/8.jpg',
+      'img/projects/typography_logo/9.jpg',
+      'img/projects/typography_logo/10.jpg',
+      'img/projects/typography_logo/11.jpg'
+    ],
   },
   {
     id: 'social-post',
@@ -323,7 +370,7 @@ const projectsData = [
       and community celebrations. I was responsible for concept sketches, final layouts,
       and color grading.`,
     metadata: {
-      type: 'Class Assignment',
+      type: 'Personal Project',
       duration: '2 months (06/2024 – 08/2024)',
       scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
     },
@@ -336,18 +383,29 @@ const projectsData = [
     title: 'Hierarchy Layout Design',
     category: '2D Illustration',
     year: '2024',
-    description: `A three-poster series capturing the vibrant street life of Ton Dan in District 4.
-      By blending hand-drawn textures with digital painting, I highlighted markets, pagodas,
-      and community celebrations. I was responsible for concept sketches, final layouts,
-      and color grading.`,
+    description: `For Hierarchy Layout Design, I reimagined Chapter 1 of Dickens’s Great Expectations 
+    in three treatments: an editorial style with classic hierarchy and generous white space; a modular 
+    grid for clarity and balance; and a chaotic layout with overlapping forms to heighten tension. 
+    By varying type scale, image placement, and spatial rhythm, each design guides the reader’s eye 
+    and evokes a distinct mood-showcasing the power of visual hierarchy.`,
     metadata: {
       type: 'Personal Project',
       duration: '5 days (12/2024)',
-      scope: ['Research & Concept', 'Digital Painting', 'Print-ready Export']
+      scope: [
+        'Concept & research', 
+        'Typographic hierarchy & grid system setup', 
+        'Three layout designs: editorial, modular, chaotic'
+      ]
     },
-    thumbnail: 'img/other4.jpg',
-    mediaThumbs: [/* … */],
-    mediaVideo: 'img/ton-dan-video-poster.jpg'
+    thumbnail: 'img/projects/hierarchy_layout/cover.png',
+    mediaThumbs: [
+      'img/projects/hierarchy_layout/1.png',
+      'img/projects/hierarchy_layout/2.jpg',
+      'img/projects/hierarchy_layout/3.png',
+      'img/projects/hierarchy_layout/4.jpg',
+      'img/projects/hierarchy_layout/5.png',
+      'img/projects/hierarchy_layout/6.jpg'
+    ]
   },
   // ────────────────────────────────────────────────────────────────────────────
 ];
