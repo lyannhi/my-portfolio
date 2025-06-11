@@ -1138,18 +1138,33 @@
   <script src="project_data.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // turn off browser “restore scroll on history”
+      // 1) disable the browser’s “remember scroll” feature
       if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
       }
 
-      window.addEventListener('load', () => {
-        // if there’s any hash other than #home, replace it
+      // 2) function to reset URL/hash and scroll
+      function goHome() {
+        // replace any existing hash with #home
         if (location.hash && location.hash !== '#home') {
           history.replaceState(null, '', location.pathname + '#home');
         }
-        // scroll to the top section
-        document.getElementById('home').scrollIntoView({behavior: 'auto'});
+        // force-scroll to top of page
+        window.scrollTo(0, 0);
+      }
+
+      // 3a) on a normal page load
+      window.addEventListener('load', () => {
+        // Safari often ignores a direct scroll, so do it in a timeout
+        setTimeout(goHome, 50);
+      });
+
+      // 3b) on pageshow (covers back/forward & home-screen launches)
+      window.addEventListener('pageshow', (evt) => {
+        // persisted=true means Safari used a cached page
+        if (evt.persisted) {
+          setTimeout(goHome, 50);
+        }
       });
       // ─────────────────────────────────────────────────────────────────────
       // (A) Render “All my works” cards into #worksGridContainer
