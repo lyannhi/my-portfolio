@@ -102,9 +102,10 @@ const projectsData = [
       type: 'Personal Project',
       duration: '3 weeks (3/2023)',
       scope: [
-        'Concept & Sketching', 
-        'Vector Illustration', 
-        'Final Export & Delivery'
+        'Research & concept development', 
+        'Hand-sketched icon explorations', 
+        'Vector illustration & refinement',
+        'Documentation of icon meanings and usage guidelines'
       ]
     },
     thumbnail: 'img/projects/dusha/cover.png',
