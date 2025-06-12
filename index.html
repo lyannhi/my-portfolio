@@ -1393,7 +1393,24 @@
       if (window.innerWidth <= 768) {
         const active = document.querySelector('#worksCarousel .work-card.active');
         if (active) {
-          active.scrollIntoView({ inline:'center', block:'nearest' });
+          const carousel = document.getElementById('worksCarousel');
+          const card     = carousel.querySelector('.work-card.active');
+          if (!carousel || !card) return;
+
+          // compute how far from the left edge of the carousel to scroll:
+          const carouselWidth = carousel.clientWidth;
+          const cardRect      = card.getBoundingClientRect();
+          const wrapRect      = carousel.getBoundingClientRect();
+
+          // card’s center relative to carousel’s left:
+          const cardCenterX   = (cardRect.left - wrapRect.left) + (cardRect.width / 2);
+          // so scrollLeft target is cardCenterX minus half the visible width:
+          const scrollTarget  = cardCenterX - (carouselWidth / 2);
+
+          carousel.scrollTo({
+            left: scrollTarget,
+            behavior: 'smooth'   // you keep your smooth behavior here, but it’s purely horizontal
+          });
         }
       }
     });
