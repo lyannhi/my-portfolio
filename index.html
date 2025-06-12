@@ -1151,7 +1151,7 @@
         if (location.hash && location.hash !== '#home') {
           history.replaceState(null, '', location.pathname + '#home');
         }
-        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        window.scrollTo(0, 0);
 
         // after resetting, re‐enable normal scroll restoration
         if ('scrollRestoration' in history) {
@@ -1159,12 +1159,7 @@
         }
       }
 
-      window.addEventListener('load', () => {
-        // reset the URL-fragment to “#home”
-        history.replaceState(null, '', location.pathname + '#home');
-        // immediately jump to top (no smooth)
-        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-      });
+      window.addEventListener('load', () => setTimeout(resetOnce, 50));
       window.addEventListener('pageshow', evt => evt.persisted && setTimeout(resetOnce, 50));
       // ─────────────────────────────────────────────────────────────────────
       // (A) Render “All my works” cards into #worksGridContainer
@@ -1398,11 +1393,7 @@
       if (window.innerWidth <= 768) {
         const active = document.querySelector('#worksCarousel .work-card.active');
         if (active) {
-          active.scrollIntoView({
-          behavior: 'auto',
-          inline:   'center',
-          block:    'nearest'
-        });
+          active.scrollIntoView({ inline:'center', block:'nearest' });
         }
       }
     });
