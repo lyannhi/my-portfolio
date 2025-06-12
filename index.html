@@ -1138,29 +1138,6 @@
   <script src="project_data.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // disable history‐restore once
-      if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
-      }
-
-      let didReset = false;
-      function resetOnce() {
-        if (didReset) return;
-        didReset = true;
-
-        if (location.hash && location.hash !== '#home') {
-          history.replaceState(null, '', location.pathname + '#home');
-        }
-        window.scrollTo(0, 0);
-
-        // after resetting, re‐enable normal scroll restoration
-        if ('scrollRestoration' in history) {
-          history.scrollRestoration = 'auto';
-        }
-      }
-
-      window.addEventListener('load', () => setTimeout(resetOnce, 50));
-      window.addEventListener('pageshow', evt => evt.persisted && setTimeout(resetOnce, 50));
       // ─────────────────────────────────────────────────────────────────────
       // (A) Render “All my works” cards into #worksGridContainer
       // ─────────────────────────────────────────────────────────────────────
