@@ -1390,10 +1390,12 @@
       // ─────────────────────────────────────────────────────────────────
       // (G) Center the active card on mobile at startup
       // ─────────────────────────────────────────────────────────────────
+      if (window.innerWidth <= 768) {
         const active = document.querySelector('#worksCarousel .work-card.active');
         if (active) {
           active.scrollIntoView({ inline:'center', block:'nearest' });
         }
+      }
     });
 
   </script>
