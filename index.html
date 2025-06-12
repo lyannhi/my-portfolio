@@ -1394,12 +1394,7 @@
         const carousel = document.getElementById('worksCarousel');
         const active = carousel.querySelector('.work-card.active');
         if (active) {
-          // scrollIntoView sẽ đưa active card vào giữa viewport
-          active.scrollIntoView({
-            behavior: 'auto',
-            inline:   'center',
-            block:    'nearest'
-          });
+          active.scrollIntoView({ inline:'center', block:'nearest' });
         }
       }
     });
