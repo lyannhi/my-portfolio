@@ -640,23 +640,24 @@
 
         } else {
           const iframe = document.createElement('iframe');
+          iframe.frameBorder    = 0;
+          iframe.allow          = 'autoplay; fullscreen';
+          iframe.allowFullscreen = true;
+          iframe.style.width    = '100%';
+          iframe.style.height   = '100%';
           
           // normalize Vimeo vs YouTube:
           let embedURL = item.src;
           if (embedURL.includes('youtube.com') || embedURL.includes('youtu.be')) {
+            // extract the 11-char YouTube ID
             const m = embedURL.match(/(?:v=|\/)([0-9A-Za-z_-]{11})(?:\?|&|$)/);
             if (m && m[1]) {
-              embedURL = `https://www.youtube.com/embed/${m[1]}?rel=0&autoplay=0&playsinline=1`;
+              embedURL = `https://www.youtube.com/embed/${m[1]}?rel=0&autoplay=0`;
             }
           }
+          // (else we leave Vimeo’s player.vimeo.com link alone)
+
           iframe.src = embedURL;
-          iframe.frameBorder = 0;
-          iframe.allow          = 'autoplay; fullscreen';
-          iframe.allowFullscreen = true;
-          iframe.setAttribute('allow', 'autoplay; fullscreen; encrypted-media');
-          iframe.setAttribute('allowfullscreen', '');
-          iframe.style.width  = '100%';
-          iframe.style.height = '100%';
           div.appendChild(iframe);
         }
 
@@ -706,16 +707,15 @@
         } else {
           let embed = src;
           if (src.includes('youtube.com') || src.includes('youtu.be')) {
-          const m = src.match(/*…*/);
-          if (m && m[1]) {
-            // playsinline=1 keeps it inline on iOS
-            embed = `https://www.youtube.com/embed/${m[1]}?rel=0&autoplay=1&playsinline=1`;
-          }
-          lbFrame.src = embed;
-          lbFrame.setAttribute('allow', 'autoplay; fullscreen; encrypted-media');
-          lbFrame.setAttribute('allowfullscreen', '');
-          lbFrame.style.display = 'block';
-        } else {
+            const m = src.match(/(?:v=|\/)([0-9A-Za-z_-]{11})(?:\?|&|$)/);
+            if (m && m[1]) {
+              // autoplay=1 to start on open
+              embed = `https://www.youtube.com/embed/${m[1]}?rel=0&autoplay=1`;
+            }
+            lbFrame.src          = embed;
+            lbFrame.style.display = 'block';
+
+          } else {
             // Vimeo: just tack on autoplay
             lbFrame.src           = src + '&autoplay=1';
             lbFrame.style.display = 'block';
