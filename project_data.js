@@ -76,6 +76,7 @@ const projectsData = [
     mediaThumbs: [
       'img/projects/vietnam_worship_website/0.png',
       'img/projects/vietnam_worship_website/0-1.png',
+      'img/projects/vietnam_worship_website/10.png',
       'img/projects/vietnam_worship_website/1.png',
       'img/projects/vietnam_worship_website/2.png',
       'img/projects/vietnam_worship_website/3.png',
