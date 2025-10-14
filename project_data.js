@@ -10,7 +10,7 @@ const projectsData = [
       true, selfish intent. With a symbolic and emotional tone, the film critiques manipulative
       affection through a visual language rich in metaphor. As the project manager, I
       contributed across research, story development, prop making, lighting, character
-      animation, color grading, and VFX—bringing the world of Alae Silentes to life from
+      animation, color grading, and VFX-bringing the world of Alae Silentes to life from
       concept to final frame.`,
     metadata: {
       type: 'Group Project',
@@ -20,7 +20,7 @@ const projectsData = [
         'Narrative and Concept Development',
         'Props Maker',
         'Motion Graphics Designer',
-        'Lighting Director',
+        'Lighting Artist',
         'Color Grading'
       ]
     },
@@ -34,10 +34,18 @@ const projectsData = [
       'img/projects/alae_silentes/4.jpeg',
       'img/projects/alae_silentes/5.jpeg',
       'img/projects/alae_silentes/10.jpeg',
-      'img/projects/alae_silentes/6.jpeg',
-      'img/projects/alae_silentes/7.jpeg',
-      'img/projects/alae_silentes/8.jpeg',
-      'img/projects/alae_silentes/11.jpeg'
+      'img/projects/alae_silentes/12.png',
+      'img/projects/alae_silentes/13.png',
+      'img/projects/alae_silentes/14.png',
+      'img/projects/alae_silentes/15.png',
+      'img/projects/alae_silentes/16.png',
+      'img/projects/alae_silentes/17.png',
+      'img/projects/alae_silentes/18.png',
+      'img/projects/alae_silentes/19.png',
+      'img/projects/alae_silentes/20.png',
+      'img/projects/alae_silentes/21.png',
+      'img/projects/alae_silentes/22.png',
+      'img/projects/alae_silentes/23.png'
     ],
     mediaVideos: [
       'https://youtu.be/yR62s5UImNc',
@@ -499,6 +507,103 @@ const projectsData = [
       'img/projects/hierarchy_layout/4.jpg',
       'img/projects/hierarchy_layout/5.png',
       'img/projects/hierarchy_layout/6.jpg'
+    ]
+  },
+  {
+    id: 'leap-of-faith',
+    title: 'Leap of Faith - 3D Animation',
+    category: '3D Design',
+    year: '2025',
+    description: `Leap of Faith is a 3D animated short film our team created in three months entirely using Blender. 
+    It follows Stew, a man afraid of heights who must cross a shaky bridge to retrieve his lost hat, only to 
+    rediscover his courage. Through expressive, wordless storytelling and a symbolic “Brave” stitch, the film 
+    explores quiet acts of bravery and personal growth. Aimed at young audiences (16–24), Leap of Faith encourages 
+    viewers to face fears and find strength in small victories. The project refined our team’s skills in character 
+    animation, lighting, and environmental storytelling while conveying a heartfelt message about courage and self-belief.`,
+    metadata: {
+      type: 'Group Project',
+      duration: '3 months (7/2025 - 9/2025)',
+      scope: [
+        'Production Manager', 
+        'Character Design', 
+        'Environment Modeling',
+        'Texturing & Shading',
+        'Layout artist',
+        'Animator',
+        'Sounds Design'
+      ]
+    },
+    thumbnail: 'img/projects/leap_of_faith/cover.png',
+    mediaThumbs: [
+      'img/projects/leap_of_faith/1.png',
+      'img/projects/leap_of_faith/2.png',
+      'img/projects/leap_of_faith/3.png',
+      'img/projects/leap_of_faith/4.png',
+      'img/projects/leap_of_faith/5.png',
+      'img/projects/leap_of_faith/6.png',
+      'img/projects/leap_of_faith/7.png',
+      'img/projects/leap_of_faith/8.png',
+      'img/projects/leap_of_faith/9.png',
+      'img/projects/leap_of_faith/10.png',
+      'img/projects/leap_of_faith/11.png',
+      'img/projects/leap_of_faith/12.png',
+      'img/projects/leap_of_faith/13.png',
+      'img/projects/leap_of_faith/14.png',
+      'img/projects/leap_of_faith/15.png'
+    ],
+    mediaVideos: [
+      'https://youtu.be/vnUIQQq-rDk'
+    ]
+  },
+  {
+    id: 'biofac',
+    title: 'Biofac - Experimental Animation',
+    category: '3D Design',
+    year: '2025',
+    description: `Biofac is a short experimental animation combining 2D and 3D visuals to portray a factory where human 
+    embryos are mechanically produced and deformed. The film explores the endless cycle of flawed creation, symbolizing 
+    society’s tendency to repeat its own mistakes without reflection or repair. Using body horror aesthetics and surreal 
+    industrial imagery, Biofac blurs the line between life and machinery, exposing the fragility of human creation in an 
+    unfeeling system. Through its minimalist narrative and atmospheric design, the work offers a haunting meditation on 
+    the cost of unchecked progress and the repetition of error within modern existence.`,
+    metadata: {
+      type: 'Group Project',
+      duration: '3 months (7/2025 - 9/2025)',
+      scope: [
+        'Production Manager', 
+        'Concept & narrative development',
+        'Environment Design', 
+        '3D Props Modeling',
+        'Texturing & Shading',
+        'Lighting Artist',
+        '3D Animator',
+        'Documentation'
+      ]
+    },
+    thumbnail: 'img/projects/biofac/cover.png',
+    mediaThumbs: [
+      'img/projects/biofac/1.png',
+      'img/projects/biofac/2.png',
+      'img/projects/biofac/3.png',
+      'img/projects/biofac/4.png',
+      'img/projects/biofac/5.png',
+      'img/projects/biofac/6.png',
+      'img/projects/biofac/7.png',
+      'img/projects/biofac/8.png',
+      'img/projects/biofac/9.png',
+      'img/projects/biofac/10.png',
+      'img/projects/biofac/11.png',
+      'img/projects/biofac/12.png',
+      'img/projects/biofac/13.png',
+      'img/projects/biofac/14.png',
+      'img/projects/biofac/15.png',
+      'img/projects/biofac/16.png',
+      'img/projects/biofac/17.png',
+      'img/projects/biofac/18.png',
+      'img/projects/biofac/19.png'
+    ],
+    mediaVideos: [
+      'https://youtu.be/st2leusn07I'
     ]
   },
   // ────────────────────────────────────────────────────────────────────────────
