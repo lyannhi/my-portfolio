@@ -542,6 +542,7 @@ const projectsData = [
       'img/projects/leap_of_faith/5.png',
       'img/projects/leap_of_faith/6.png',
       'img/projects/leap_of_faith/7.png',
+      'img/projects/leap_of_faith/16.png',
       'img/projects/leap_of_faith/8.png',
       'img/projects/leap_of_faith/9.png',
       'img/projects/leap_of_faith/10.png',
